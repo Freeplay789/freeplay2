@@ -6,10 +6,8 @@ function handleClick() {
   clickCount++;
 
   if (clickCount <= 2) {
-    // Sirf 2 baar ad link open
     window.open(adLink, "_blank");
   } else {
-    // 3rd time congratulations screen
     document.getElementById("main").classList.add("hidden");
     document.getElementById("success").classList.remove("hidden");
   }
