@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>$20 Freeplays</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <style>
+    /* Reset & body */
     body {
       margin: 0;
       height: 100vh;
@@ -16,29 +16,32 @@
       justify-content: center;
     }
 
+    /* Box styling */
     .box {
-      background: rgba(0,0,0,0.75);
+      background: rgba(0,0,0,0.85);
       padding: 30px;
       border-radius: 14px;
       text-align: center;
       color: #fff;
-      max-width: 350px;
+      max-width: 400px;
       width: 90%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      transition: all 0.3s ease;
     }
 
     h1 {
       color: #ffd700;
-      font-size: 34px;
-      margin-bottom: 10px;
+      font-size: 36px;
+      margin-bottom: 15px;
     }
 
     .bonus {
       font-size: 18px;
-      margin: 6px 0;
+      margin: 8px 0;
     }
 
     button {
-      margin-top: 20px;
+      margin-top: 25px;
       width: 100%;
       padding: 14px;
       font-size: 18px;
@@ -48,6 +51,11 @@
       background: linear-gradient(45deg,#22c55e,#16a34a);
       color: #000;
       font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
     }
 
     .hidden {
@@ -57,20 +65,61 @@
 </head>
 <body>
 
-<div class="box" id="main">
-  <h1>$20 Freeplays!</h1>
-  <div class="bonus">🔥 500% Signup Bonus</div>
-  <div class="bonus">💰 300% Regular Bonus</div>
+  <!-- Main Box -->
+  <div class="box" id="main">
+    <h1>$20 Freeplays!</h1>
+    <div class="bonus">🔥 500% Signup Bonus</div>
+    <div class="bonus">💰 300% Regular Bonus</div>
+    <button id="claimBtn">CLAIM NOW</button>
+  </div>
 
-  <button onclick="handleClick()">CLAIM NOW</button>
-</div>
+  <!-- Success Box -->
+  <div class="box hidden" id="success">
+    <h1>🎉 Congratulations!</h1>
+    <p>You have successfully completed the steps.</p>
+    <button id="backBtn">Go Back</button>
+  </div>
 
-<div class="box hidden" id="success">
-  <h1>🎉 Congratulations!</h1>
-  <p>You have successfully completed the steps.</p>
-  <button onclick="goBack()">Go Back</button>
-</div>
+  <script>
+    let clickCount = 0;
+    const adLink = "https://www.effectivegatecpm.com/w8grsbmi3?key=bad7a3a33307c1c056108ce6671cb556";
 
-<script src="script.js"></script>
+    const mainBox = document.getElementById("main");
+    const successBox = document.getElementById("success");
+    const claimBtn = document.getElementById("claimBtn");
+    const backBtn = document.getElementById("backBtn");
+
+    claimBtn.addEventListener("click", () => {
+      clickCount++;
+
+      if (clickCount <= 2) {
+        // Open ad in new tab
+        const newTab = window.open(adLink, "_blank");
+
+        if (!newTab || newTab.closed || typeof newTab.closed == 'undefined') {
+          alert("Popup blocked! Please allow popups to claim your bonus.");
+          return;
+        }
+
+        // Optional: small delay to give user chance to see ad
+        setTimeout(() => {
+          if (clickCount === 2) {
+            mainBox.classList.add("hidden");
+            successBox.classList.remove("hidden");
+          }
+        }, 2000); // 2 seconds delay
+      } else {
+        mainBox.classList.add("hidden");
+        successBox.classList.remove("hidden");
+      }
+    });
+
+    backBtn.addEventListener("click", () => {
+      clickCount = 0;
+      successBox.classList.add("hidden");
+      mainBox.classList.remove("hidden");
+    });
+  </script>
+
 </body>
 </html>
