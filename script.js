@@ -17,13 +17,13 @@ claimBtn.addEventListener("click", () => {
       return;
     }
 
-    // Small delay to show success after second click
-    setTimeout(() => {
-      if (clickCount === 2) {
+    // 2-second delay after second click to show success
+    if (clickCount === 2) {
+      setTimeout(() => {
         mainBox.classList.add("hidden");
         successBox.classList.remove("hidden");
-      }
-    }, 2000); // 2 seconds delay
+      }, 2000);
+    }
   } else {
     mainBox.classList.add("hidden");
     successBox.classList.remove("hidden");
