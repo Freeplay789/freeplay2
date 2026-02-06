@@ -5,11 +5,11 @@
   <title>$20 Freeplays</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Reset & body */
+    /* Body styling with modern gradient background */
     body {
       margin: 0;
       height: 100vh;
-      background: url("bg.jpg") center/cover no-repeat;
+      background: linear-gradient(135deg, #1e3c72, #2a5298); /* Blue gradient */
       font-family: Arial, sans-serif;
       display: flex;
       align-items: center;
@@ -77,7 +77,6 @@
   <div class="box hidden" id="success">
     <h1>🎉 Congratulations!</h1>
     <p>You have successfully completed the steps.</p>
-    <button id="backBtn">Go Back</button>
   </div>
 
   <script>
@@ -87,7 +86,6 @@
     const mainBox = document.getElementById("main");
     const successBox = document.getElementById("success");
     const claimBtn = document.getElementById("claimBtn");
-    const backBtn = document.getElementById("backBtn");
 
     claimBtn.addEventListener("click", () => {
       clickCount++;
@@ -101,7 +99,7 @@
           return;
         }
 
-        // Optional: small delay to give user chance to see ad
+        // Optional small delay to give user chance to see ad
         setTimeout(() => {
           if (clickCount === 2) {
             mainBox.classList.add("hidden");
@@ -112,12 +110,6 @@
         mainBox.classList.add("hidden");
         successBox.classList.remove("hidden");
       }
-    });
-
-    backBtn.addEventListener("click", () => {
-      clickCount = 0;
-      successBox.classList.add("hidden");
-      mainBox.classList.remove("hidden");
     });
   </script>
 
