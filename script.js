@@ -2,8 +2,8 @@ let clickCount = 0;
 
 // Ads links (2 clicks required)
 const adLinks = [
-  "https://www.effectivegatecpm.com/w8grsbmi3?key=bad7a3a33307c1c056108ce6671cb556",
-  "https://www.effectivegatecpm.com/w8grsbmi3?key=bad7a3a33307c1c056108ce6671cb556"
+  "https://www.effectivegatecpm.com/dvxike6iw?key=cbe35442dff8973325cc02db1c66af9e",
+  "https://www.effectivegatecpm.com/dvxike6iw?key=cbe35442dff8973325cc02db1c66af9e"
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,3 +27,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
