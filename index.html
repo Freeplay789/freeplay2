@@ -2,28 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Free Play</title>
+  <title>$20 Freeplays</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
+      margin: 0;
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #020617;
+      background: url("bg.jpg") center/cover no-repeat;
       font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
+    .box {
+      background: rgba(0,0,0,0.75);
+      padding: 30px;
+      border-radius: 14px;
+      text-align: center;
+      color: #fff;
+      max-width: 350px;
+      width: 90%;
+    }
+
+    h1 {
+      color: #ffd700;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .bonus {
+      font-size: 18px;
+      margin: 6px 0;
+    }
+
     button {
-      padding: 14px 28px;
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
       font-size: 18px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
-      background: #22c55e;
-      color: black;
-      margin-top: 20px;
+      background: linear-gradient(45deg,#22c55e,#16a34a);
+      color: #000;
+      font-weight: bold;
     }
+
     .hidden {
       display: none;
     }
@@ -31,14 +57,17 @@
 </head>
 <body>
 
-<div id="main">
-  <h1>Click to Continue</h1>
-  <button onclick="handleClick()">Continue</button>
+<div class="box" id="main">
+  <h1>$20 Freeplays!</h1>
+  <div class="bonus">🔥 500% Signup Bonus</div>
+  <div class="bonus">💰 300% Regular Bonus</div>
+
+  <button onclick="handleClick()">CLAIM NOW</button>
 </div>
 
-<div id="success" class="hidden">
+<div class="box hidden" id="success">
   <h1>🎉 Congratulations!</h1>
-  <p>You have completed the steps.</p>
+  <p>You have successfully completed the steps.</p>
   <button onclick="goBack()">Go Back</button>
 </div>
 
