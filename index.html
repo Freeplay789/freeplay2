@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Play</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #020617;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    button {
+      padding: 14px 28px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #22c55e;
+      color: black;
+      margin-top: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="main">
+  <h1>Click to Continue</h1>
+  <button onclick="handleClick()">Continue</button>
+</div>
+
+<div id="success" class="hidden">
+  <h1>🎉 Congratulations!</h1>
+  <p>You have completed the steps.</p>
+  <button onclick="goBack()">Go Back</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
