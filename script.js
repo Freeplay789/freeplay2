@@ -17,7 +17,7 @@ claimBtn.addEventListener("click", () => {
       return;
     }
 
-    // Optional small delay to give user chance to see ad
+    // Small delay to show success after second click
     setTimeout(() => {
       if (clickCount === 2) {
         mainBox.classList.add("hidden");
