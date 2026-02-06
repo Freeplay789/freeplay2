@@ -1,68 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>$1 Freeplay</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Facebook / Social Share Meta Tags -->
+  <!-- Facebook Share -->
   <meta property="og:title" content="$1 Freeplay – Claim Now">
-  <meta property="og:description" content="🔥 500% Signup Bonus | 💰 300% Regular Bonus. Claim your $1 Freeplay now!">
+  <meta property="og:description" content="🔥 500% Signup Bonus | 💰 300% Regular Bonus">
   <meta property="og:image" content="https://freeplay789.github.io/freeplay2/preview.jpg">
   <meta property="og:url" content="https://freeplay789.github.io/freeplay2/">
   <meta property="og:type" content="website">
 
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    body{
+      margin:0;height:100vh;
+      background:linear-gradient(135deg,#1e3c72,#2a5298);
+      font-family:Arial, sans-serif;
+      display:flex;align-items:center;justify-content:center;
     }
-
-    .box {
-      background: rgba(0,0,0,0.85);
-      padding: 30px;
-      border-radius: 14px;
-      text-align: center;
-      color: #fff;
-      max-width: 400px;
-      width: 90%;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    .box{
+      background:rgba(0,0,0,.85);
+      padding:30px;border-radius:14px;
+      text-align:center;color:#fff;
+      max-width:400px;width:90%;
+      box-shadow:0 8px 20px rgba(0,0,0,.5);
     }
-
-    h1 {
-      color: #ffd700;
-      font-size: 36px;
-      margin-bottom: 15px;
+    h1{color:#ffd700;font-size:36px;margin-bottom:15px}
+    .bonus{font-size:18px;margin:8px 0}
+    button{
+      margin-top:25px;width:100%;padding:14px;
+      font-size:18px;border:none;border-radius:10px;
+      cursor:pointer;font-weight:bold;color:#000;
+      background:linear-gradient(45deg,#22c55e,#16a34a);
     }
-
-    .bonus {
-      font-size: 18px;
-      margin: 8px 0;
-    }
-
-    button {
-      margin-top: 25px;
-      width: 100%;
-      padding: 14px;
-      font-size: 18px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      background: linear-gradient(45deg,#22c55e,#16a34a);
-      color: #000;
-      font-weight: bold;
-      transition: transform 0.2s ease;
-    }
-
-    button:hover {
-      transform: scale(1.05);
-    }
-
-    .hidden {
-      display: none;
-    }
+    .hidden{display:none}
   </style>
 </head>
+
+<body>
+  <div class="box" id="main">
+    <h1>$1 Freeplay!</h1>
+    <div class="bonus">🔥 500% Signup Bonus</div>
+    <div class="bonus">💰 300% Regular Bonus</div>
+    <button id="claimBtn">CLAIM NOW</button>
+  </div>
+
+  <div class="box hidden" id="success">
+    <h1>🎉 Congratulations!</h1>
+    <p>You have successfully completed the steps.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
