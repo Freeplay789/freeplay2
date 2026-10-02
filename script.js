@@ -2,8 +2,8 @@ let clickCount = 0;
 
 // Ads links (2 clicks required)
 const adLinks = [
-  "https://www.effectivegatecpm.com/dvxike6iw?key=cbe35442dff8973325cc02db1c66af9e",
-  "https://www.effectivegatecpm.com/dvxike6iw?key=cbe35442dff8973325cc02db1c66af9e"
+  "https://www.profitableratecpmnetwork.com/wehnemb3?key=36e929074d145c402bc795798e679b4f",
+  "https://www.profitableratecpmnetwork.com/zcxbzih317?key=d3f217b8171e228b55c474ac6594857c"
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
